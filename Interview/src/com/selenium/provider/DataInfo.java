@@ -9,6 +9,7 @@ public class DataInfo {
 	public Object[][] data(){
 		return new Object[][] {
 			{"Wizeline"},
+			{"Facebook"}
 		};
 		
 	}

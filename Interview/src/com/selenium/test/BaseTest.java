@@ -2,14 +2,16 @@ package com.selenium.test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
 	WebDriver driver; 
 	
-	@BeforeTest 
+	@BeforeMethod
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
 		driver = new ChromeDriver();
@@ -17,7 +19,7 @@ public class BaseTest {
 		driver.get("https://www.google.com/");
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void closeDriver() {
 		driver.quit();
 	}
