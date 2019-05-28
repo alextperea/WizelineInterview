@@ -16,6 +16,9 @@ public class BasePage  {
 		this.wait = new WebDriverWait(driver,10);
 	} 
 	
+	public void isDisplayed(WebElement element) {
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
 	
 	public void typeText(WebElement element, String text) {
 		wait.until(ExpectedConditions.visibilityOf(element));
